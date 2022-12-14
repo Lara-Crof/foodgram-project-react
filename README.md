@@ -1,8 +1,10 @@
 API Foodgram позволяет сохранять свои рецепты и делиться ими с друзьями. Дополнительные возможности позволяют выбрать избранные рецепты или подписаться на друзей, можно собрать корзину и выгрузить список того что требуется купить для их приготовления.
 
-Стек технологий: Python 3.9, Django 3.2.9, DjangoRestFramework, SimpleJWT, PostgreSQL, Docker, Docker Compose, Gunicorn 20.0, Nginx 1.21 (Ru).
+Стек технологий: 
+- Python 3.9, Django 3.2.9, DjangoRestFramework, SimpleJWT, PostgreSQL, Docker, Docker Compose, Gunicorn 20.0, Nginx 1.21 (Ru).
 
 Особенность данного проекта:
+
 В этом проекте применена технология Single-page application. Моя часть работы заключалась в написании Backend API для него и размещение всего проекта на сервере.
 
 Процесс регистрации и авторизация пользователя ...
