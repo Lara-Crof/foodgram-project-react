@@ -30,28 +30,29 @@ API Foodgram позволяет сохранять свои рецепты и д
 /frontend/
 /infra/
 /docker-compose.yml
+
 Создать три файла с переменными окружения:
+- .env_db - необходим для создания БД
+- DB_ENGINE=django.db.backends.postgresql_psycopg2
+- DB_NAME=postgres
+- POSTGRES_USER=<ИМЯ ПОЛЬЗОВАТЕЛЯ>
+- POSTGRES_PASSWORD=<ПАРОЛЬ>
+- DB_HOST=db
+- DB_PORT=5432
+- CLIENT_ENCODING=UTF8
+- .env_web - необходимы для запуска проекта в целом.
+- SECRET_KEY=<КЛЮЧ БЕЗОПАСНОСТИ БЭКЭНДА>
+- HOST_NAMES=<ИМЯ ХОСТА>, <ИМЯ ХОСТА>, <...>, <АДРЕС ХОСТА>
+- EMAIL_FOODGRAM=<ПОЧТА ДЛЯ ОТПРАВКИ ПИСЕМ АДМИНИСТРАТОРУ>
+- .env_mail - необходимы для отправки почты.
+- EMAIL_HOST=smtp.mail.ru
+- EMAIL_PORT=2525
+- EMAIL_HOST_USER=<ПОЧТОВЫЙ ЯЩИК С КОТОРОГО ОТПРАВЛЯЕТСЯ ПОЧТА>
+- EMAIL_HOST_PASSWORD=<ПАРОЛЬ>
+- EMAIL_USE_TLS=True
 
-.env_db - необходим для создания БД
-DB_ENGINE=django.db.backends.postgresql_psycopg2
-DB_NAME=postgres
-POSTGRES_USER=<ИМЯ ПОЛЬЗОВАТЕЛЯ>
-POSTGRES_PASSWORD=<ПАРОЛЬ>
-DB_HOST=db
-DB_PORT=5432
-CLIENT_ENCODING=UTF8
-.env_web - необходимы для запуска проекта в целом.
-SECRET_KEY=<КЛЮЧ БЕЗОПАСНОСТИ БЭКЭНДА>
-HOST_NAMES=<ИМЯ ХОСТА>, <ИМЯ ХОСТА>, <...>, <АДРЕС ХОСТА>
-EMAIL_FOODGRAM=<ПОЧТА ДЛЯ ОТПРАВКИ ПИСЕМ АДМИНИСТРАТОРУ>
-.env_mail - необходимы для отправки почты.
-EMAIL_HOST=smtp.mail.ru
-EMAIL_PORT=2525
-EMAIL_HOST_USER=<ПОЧТОВЫЙ ЯЩИК С КОТОРОГО ОТПРАВЛЯЕТСЯ ПОЧТА>
-EMAIL_HOST_PASSWORD=<ПАРОЛЬ>
-EMAIL_USE_TLS=True
+
 Выполнить команду:
-
-docker-compose up -d
-Работа с эндпоинтами:
-Краткое описание основных возможностей, за более подробной информацией обратитесь к /redoc/ (yml).
+  docker-compose up -d
+  Работа с эндпоинтами:
+  Краткое описание основных возможностей, за более подробной информацией обратитесь к /redoc/ (yml).
